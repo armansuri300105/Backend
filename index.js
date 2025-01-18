@@ -20,12 +20,14 @@ const codeforces = require('./routes/codeforces.js')
 const cfuser = require('./routes/cfuser.js')
 const lcuser = require('./routes/lcuser.js')
 const leetcode = require('./routes/leetcode.js')
+const currentcontest = require("./routes/contestName.js")
 
 app.use('/codechef', codeChefScraping);
 app.use('/codeforces',codeforces);
 app.use('/cfuser', cfuser);
 app.use('/lcuser',lcuser)
 app.use('/leetcode', leetcode);
+app.use('/currentcontest', currentcontest);
 
 app.listen(port, () => {
     connectMongo();
